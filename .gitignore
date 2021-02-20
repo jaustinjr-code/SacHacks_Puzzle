@@ -1,6 +1,14 @@
 
 .DS_Store
+<<<<<<< Updated upstream
 *.xml
 *.iml
+=======
+.idea/misc.xml
+.idea/modules.xml
+.idea/SacHacks_Puzzle.iml
+.idea/vcs.xml
+sachack bufferedimage test 1/.idea/vcs.xml
+>>>>>>> Stashed changes
 sachack bufferedimage test 1/.idea/workspace.xml
 *.xml
