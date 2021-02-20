@@ -14,14 +14,14 @@ public class ImageLoad extends Applet {
         image = getImage(fileName);
     }
 
-//    public void paint(Graphics g)
-//    {
-//        Graphics2D g2 = (Graphics2D)g;
-//        //image = getImage("shark.png");
-//        Rectangle rect = new Rectangle(25,300,110,110);
+    public void paint(Graphics g)
+    {
+        Graphics2D g2 = (Graphics2D)g;
+        //image = getImage("shark.png");
+        Rectangle rect = new Rectangle(25,300,110,110);
 //        g2.drawImage(image.getSubimage(30,30,100,100), 25, 300, null);
-//        g2.draw(rect);
-//    }
+        g2.draw(rect);
+    }
 
     public BufferedImage getImage(String fileName)
     {
@@ -34,9 +34,10 @@ public class ImageLoad extends Applet {
         return img;
     }
 
-    public BufferedImage getBufferedImage()
+
+    public BufferedImage GS(int x, int y, int w, int h)
     {
-        return image;
+       return image.getSubimage(x,y,w,h);
     }
 
 

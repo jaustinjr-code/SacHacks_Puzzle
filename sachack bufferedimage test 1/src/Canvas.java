@@ -5,12 +5,12 @@ import java.awt.image.BufferedImage;
 public class Canvas {
 
 //    private BufferedImage image;
-
+        public JFrame jp1;
     public Canvas()
     {
-//        ImageLoad l = new ImageLoad("blan.png");
-        JFrame jp1 = new JFrame();
-//        jp1.getContentPane().add(l, BorderLayout.CENTER);
+        ImageLoad l = new ImageLoad("shark.png");
+        jp1 = new JFrame();
+        jp1.getContentPane().add(l, BorderLayout.CENTER);
         jp1.setSize(new Dimension(900,900));
         System.out.println("Before");
         jp1.setVisible(true);
