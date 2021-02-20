@@ -1,12 +1,36 @@
 import pkg.*;
 
-public class Main {
+public class Main implements InputControl//, InputKeyControl
+{
     public static void main(String[] args)
     {
-        Rectangle r = new Rectangle(10,10,10,10);
-        r.draw();
+        MouseController mC = new MouseController(Canvas.getInstance(),new Main());
 
-        Picture p = new Picture("shark.png");
-        p.draw();
+        Rectangle[][] grid = new Rectangle[3][3];
+
+        for(int i = 0; i < grid.length; i++)
+        {
+            for(int j = 0; j < grid.length; j++)
+            {
+                grid[i][j] = new Rectangle((50*i+5*i+50), (50*j+5*j+50), 50, 50);
+                grid[i][j].setColor(new Color(i*j*60, 0, 0));
+                grid[i][j].fill();
+            }
+        }
+
+//        Picture p = new Picture("shark.png");
+//        p.draw();
     }
+
+    public void onMouseClick(double x, double y){
+
+    }
+
+//    public void keyPress(String s)
+//    {
+//
+//
+//    }
+
+
 }
