@@ -61,4 +61,8 @@ public class Color
     {
        return blue;
     }
+
+    public String toString(){
+        return ("R: " + getRed() + "; G: "+ getGreen() + "; B: " + getBlue());
+    }
 }

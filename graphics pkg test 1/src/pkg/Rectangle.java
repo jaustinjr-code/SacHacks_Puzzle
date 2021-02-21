@@ -29,10 +29,13 @@ public class Rectangle implements Shape
      */
     public Rectangle(Rectangle rectangle)
     {
+        System.out.println("COPY BABY");
         this.x = rectangle.x;
         this.y = rectangle.y;
         this.width = rectangle.width;
         this.height = rectangle.height;
+        this.color = rectangle.color;
+        this.setColor(this.color);
     }
 
     /**
@@ -122,6 +125,11 @@ public class Rectangle implements Shape
         Canvas.getInstance().repaint();
     }
 
+    public Color getColor()
+    {
+        return color;
+    }
+
     /**
        Draws this rectangle.
     */
@@ -129,6 +137,11 @@ public class Rectangle implements Shape
     {
         filled = false;
         Canvas.getInstance().show(this);
+    }
+
+    public void undraw()
+    {
+        Canvas.getInstance().hide(this);
     }
 
     /**
@@ -142,7 +155,7 @@ public class Rectangle implements Shape
 
     public String toString()
     {
-        return "Rectangle[x=" + getX() + ",y=" + getY() + ",width=" + getWidth() + ",height=" + getHeight() + "]";
+        return "Rectangle[x=" + getX() + ",y=" + getY() + ",width=" + getWidth() + ",height=" + getHeight() + "]; Color =  " + color;
     }
 
     public void paintShape(Graphics2D g2)
@@ -160,7 +173,20 @@ public class Rectangle implements Shape
         }
     }
 	// added by Neato 10/21/18
-	
+
+    public boolean equals(Rectangle a)
+    {
+        if((x == a.getX()) && (y == a.getY()) && (width == a.getWidth()) && (height == a.getHeight()))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
 	public boolean contains(Rectangle a)
 	{
 		if(x < a.getX() + a.getWidth() && x + width > a.getX() && y < a.getY() + a.getHeight() && y + height > a.getY())
@@ -169,4 +195,13 @@ public class Rectangle implements Shape
 		}
 		return false;
 	}
+
+    public boolean contains(int xMouse, int yMouse)
+    {
+        if( (x < xMouse)  && (x + width > xMouse) && (y < yMouse)  && (y + height > yMouse) )
+        {
+            return true;
+        }
+        return false;
+    }
 }
