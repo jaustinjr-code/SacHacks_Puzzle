@@ -21,7 +21,19 @@ public class Rectangle implements Shape
         y = 0;
         width = 0;
         height = 0;
-    }       
+    }
+
+    /**
+     * We needed this.
+     * @param rectangle
+     */
+    public Rectangle(Rectangle rectangle)
+    {
+        this.x = rectangle.x;
+        this.y = rectangle.y;
+        this.width = rectangle.width;
+        this.height = rectangle.height;
+    }
 
     /**
        Constructs a rectangle.
