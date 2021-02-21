@@ -29,7 +29,7 @@ public class Rectangle implements Shape
      */
     public Rectangle(Rectangle rectangle)
     {
-        System.out.println("COPY BABY");
+//        System.out.println("COPY BABY");
         this.x = rectangle.x;
         this.y = rectangle.y;
         this.width = rectangle.width;
@@ -122,7 +122,7 @@ public class Rectangle implements Shape
     public void setColor(Color newColor)
     {
         color = newColor;
-        Canvas.getInstance().repaint();
+//        Canvas.getInstance().repaint();
     }
 
     public Color getColor()

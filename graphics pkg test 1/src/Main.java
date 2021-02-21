@@ -6,35 +6,35 @@ public class Main //implements InputControl//, InputKeyControl
     {
 //        Rectangle[][] grid = new Rectangle[3][3];
 //        Puzzle p = new Puzzle(grid, 3, 3);
-        //MouseController mC = new MouseController(Canvas.getInstance(),  new Puzzle());
-        //Puzzle p = new Puzzle();
-        Rectangle a = new Rectangle(50,50,100,100);
-        Rectangle b = new Rectangle(200,200,100,100);
-        a.setColor(Color.RED);
-        b.setColor(Color.BLUE);
-        System.out.println("A: " + a);
-        System.out.println("B: " + b);
-
-        a.fill();
-        b.fill();
-
+        MouseController mC = new MouseController(Canvas.getInstance(),  new Puzzle());
+//        Puzzle p = new Puzzle(3,3);
+//        Rectangle a = new Rectangle(50,50,100,100);
+//        Rectangle b = new Rectangle(200,200,100,100);
+//        a.setColor(Color.RED);
+//        b.setColor(Color.BLUE);
+//        System.out.println("A: " + a);
+//        System.out.println("B: " + b);
+//
+//        a.fill();
+//        b.fill();
+//
 //        Rectangle temp = a;
 //        a = b;
 //        b = temp;
-
-//        Rectangle temp = new Rectangle(a);
-//        a = new Rectangle(b);
-//        b = new Rectangle(temp);
-        a.undraw();
-        b.undraw();
-        Color temp = a.getColor();
-        a.setColor(b.getColor());
-        b.setColor(temp);
 //
-        a.fill();
-        b.fill();
-        System.out.println("NEW A: " + a);
-        System.out.println("NEW B: " + b);
+////        Rectangle temp = new Rectangle(a);
+////        a = new Rectangle(b);
+////        b = new Rectangle(temp);
+//        a.undraw();
+//        b.undraw();
+//        Color temp = a.getColor();
+//        a.setColor(b.getColor());
+//        b.setColor(temp);
+////
+//        a.fill();
+//        b.fill();
+//        System.out.println("NEW A: " + a);
+//        System.out.println("NEW B: " + b);
 
 
 
